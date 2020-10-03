@@ -6,6 +6,8 @@ media
 *.sqlite3
 *.env
 
+myvenv/
+
 # Accept these files in the repository
 !.gitignore
 !.travis.yml
