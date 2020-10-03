@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<table id="detailTable">
+    <tr>
+        <td style="background-color: white;"><img id="detailimg" src="{% static 'media/duduk.png'%}"></td>
+        <td style="background-color: grey;">
+            <span>{{ object.get_category_display }}</span>
+            <h1 class="title">{{object.title}}</h1>
+            <p class="description">{{object.description}}</p>
+            <h3 class="price">Price: ${{object.price}}</h3>
+            <a class="add" href="{{ object.get_add_to_cart_url }}">Add to cart</a>
+            <a class="del" href="{{ object.get_remove_from_cart_url }}">Remove</a>
+        </td>
+    </tr>
+</table>
+
+{% endblock content %}

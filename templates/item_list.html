@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div id="category">
+                <p>Category: </p>
+                <a href="#" id="catbat" >Instrument</a>
+                <a href="#" id="catbat">Case/Cover</a>
+                <a href="#" id="catbat">Canes</a>
+                <a href="#" id="catbat">Books</a>
+    </div>
+  {% for item in object_list %}
+  <div class="item">
+    <div id="description">
+        <h4>{{ item.title}}</h4>
+        <p>
+          {{ item.description}}
+        </p>
+        <p id="category">Category: {{ item.get_category_display }}</p>
+        <p id="price">${{ item.price }}</p>
+        <a class="details" href="{{ item.get_absolute_url}}">Details</a>
+    </div>
+        <figure class="photo">
+          <img src="{% static 'media/duduk.png' %}" alt="{{item.title}}" width="200px">
+        </figure>
+  </div>
+  {% endfor %}
+{% endblock content %}

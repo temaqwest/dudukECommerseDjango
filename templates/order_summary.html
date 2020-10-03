@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Order summary</h1>
+<hr>
+<div id="carttables">
+    <table width="100%" id="cart_table">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Item title</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Total price</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for order_item in object.items.all %}
+            <tr class="sameH">
+                <td>{{ forloop.counter }}</td>
+                <td>{{ order_item.item.title }}</td>
+                <td>{{ order_item.item.price }}</td>
+                <td>{{ order_item.quantity }}</td>
+                <td>${{ order_item.get_total_item_price }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="4">Order total:</td>
+            <td> ${{ object.get_total }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div style="margin: 39px 2px;"><a href="/checkout/" id="confirm">Confirm Order</a></div>
+{% endblock content %}

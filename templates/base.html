@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="{% static "css/main.css" %}" rel="stylesheet">
+    <title>DudukMarket</title>
+</head>
+<body>
+    <header id="HOth">
+        <a href="#" id="btn">Get order</a>
+        <a href="/"><img src="{% static "media/logo.png" %}" width="88px"></a>
+        <a href="{% url 'core:order-summary'%}" id="btn">Cart <img src="{% static 'media/cart.png'%}" width="15px" /></a>
+    </header>
+            {% for message in messages %}
+                <div id="message"><p id="message">{{ message }}</p></div>
+            {% endfor %}
+    <div id="logg">
+        {% if user.is_authenticated %}
+            <p>Hello, {{ user}}! </p>
+            <hr/>
+            <br/>
+            <a id="logout" href="{% url 'account_logout'%}">Logout</a>
+        {% else %}
+            <a id="login" href="{% url 'account_login'%}">Login</a>
+            <a id="signup" href="{% url 'account_signup'%}">Sign up</a>
+        {% endif %}
+    </div>
+    <img src="{% static "media/sale.jpg" %}" id="bigbillboard">
+    <a href="#"><img src="{% static "media/lmbd.png" %}" id="billboard"></a>
+    <div class="content">
+        {% block content  %}
+        {% endblock content %}
+    </div>
+    <footer>
+        <table class="ft">
+            <tr>
+                <td rowspan="6" width="340px" style="text-align: center;"><img id="flogo" src="{% static "media/fooLogo.png" %}" alt=""></td>
+                <td><p>Explore</p></td>
+                <td><p>Visit</p></td>
+                <td><p>Follow</p></td>
+                <td><p>Legal</p></td>
+                <td><p>Cart</p></td>
+            </tr>
+            <tr>
+                <td>Home</td>
+                <td rowspan="2">36 Yeznik <br>Koghbatsi St,<br> Yerevan 0002,<br> Armenia</td>
+                <td><img src="{% static "media/twitter.png" %}"></td>
+                <td>Terms of use</td>
+                <td>Next page</td>
+            </tr>
+            <tr>
+                <td>Get Order</td>
+                <td><img src="{% static "media/instagram.png" %}" ></td>
+                <td>Privacy</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>About Duduk</td>
+                <td></td>
+                <td><img src="{% static "media/facebook.png" %}" ></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Cart</td>
+                <td><p>New Business</p></td>
+                <td><img src="{% static "media/linkedin.png" %}" ></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Contacts</td>
+                <td>dMarket@gmail.com<br>+1 949 537 2094</td>
+                <td><img src="{% static "media/vkico.png" %}" ></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="center">© 2020 Duduk Market. All Rights Reserved.</td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

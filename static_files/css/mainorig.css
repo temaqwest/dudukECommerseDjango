@@ -1,0 +1,141 @@
+body { 
+    background-image: url(../media/mosaic.png);
+    font-family: Roboto;
+    margin: auto;
+    color: #fff;
+}
+
+.content {
+    margin-right: 470px;
+    margin-top: 30px;
+    margin-left: 60px;
+    padding: 1px 16px;
+}
+
+#description {
+    background: rgba(236, 236, 236, 0.51);
+    width: 230px;
+    height: 247px;
+    margin: 0px;
+    padding: 5px;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.photo {
+    background-color: #fff;
+    width: 567px;
+    height: 212px;
+    margin: 0px;
+    padding-top: 45px;
+    display: block; 
+    text-align: center; /* Выравнивание по центру */
+}
+
+.item {
+    display: inline-flex;
+    margin: 30px 0px;
+}
+
+#description h4 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+    color: #1C0202;
+    text-align: left;
+
+}
+
+#description p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: 0.04em;
+    color: rgba(34, 2, 2, 0.85);
+}
+
+button {
+    background: #FFFFFF;
+    border: 1px solid #BFBFBF;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: #1C0202;
+    padding: 5px 10px;
+}
+
+header#HOth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 38px;
+    background-color: #56444493;
+}
+
+a {text-decoration: none;}
+
+a#btn {
+    text-decoration: none;
+    color: white;
+    font-family: Petrona;
+    font-weight: lighter;
+    font-size: 20px;
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    padding: 0px 25px;
+}
+
+#category {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-right: 48px;
+}
+
+#catbat {
+    color: #fff;
+    padding: 2px 25px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    border-radius: 20px;
+    vertical-align: middle;
+    text-align: center;
+    border: 2px solid #FFFFFF;
+}
+
+#category p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    margin: 0px;
+    color: #FFFFFF;
+}
+
+#catbat_selected {
+    background-color: #fff;
+    color: #5B0303;
+    padding: 2px 25px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    border-radius: 20px;
+    vertical-align: middle;
+    text-align: center;
+    border: 2px solid #FFFFFF;
+}
